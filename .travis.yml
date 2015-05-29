@@ -1,0 +1,9 @@
+language: go
+
+go:
+  - 1.4.2
+
+install: go get -v -t github.com/carpedm20/rnn/rnn
+
+script:
+  - go test -v ./rnn/... && go build ./rnn
