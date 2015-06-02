@@ -11,7 +11,7 @@ type Matrix struct {
 	N  int // # of rows
 	D  int // # of columns
 	W  []float64
-	Wd []float64
+	Dw []float64
 }
 
 /*
