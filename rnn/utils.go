@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"math"
 	"math/rand"
 )
@@ -9,8 +10,8 @@ func randFloat(low, high float64) float64 {
 	return rand.Float64()*(high-low) + low
 }
 
-func randInt(low, high float64) int64 {
-	return int64(math.Floor(rand.Float64()*(high-low) + low))
+func randInt(low, high float64) int {
+	return int(math.Floor(rand.Float64()*(high-low) + low))
 }
 
 /*
@@ -47,4 +48,13 @@ func gaussianRandom() float64 {
 	cache = u * c
 	returnCache = true
 	return v * c
+}
+
+func PrintMatrix(mat *Matrix) {
+	for i := 0; i < mat.N; i++ {
+		for j := 0; j < mat.D; j++ {
+			fmt.Printf("%6.3f ", mat.Get(i, j))
+		}
+		fmt.Print("\n")
+	}
 }

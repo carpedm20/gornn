@@ -12,14 +12,16 @@ func hell() {
 }
 
 func main() {
-	mat := RandomMatrix(2, 4, 1, 1)
-
-	fmt.Println(mat.Get(1, 0))
-	fmt.Println(mat)
-
-	var graph Graph = Graph{true, []func(){hell, hell}}
+	/*var graph Graph = Graph{true, []func(){hell, hell}}
 
 	for i := range graph.Backprop {
 		graph.Backprop[i]()
-	}
+	}*/
+
+	mat := RandomMatrix(4, 4, 1, 1)
+	PrintMatrix(mat)
+	var graph1 Graph
+	PrintMatrix(graph1.Tanh(mat))
+	pluck := graph1.RowPluck(mat, 1)
+	PrintMatrix(pluck)
 }
