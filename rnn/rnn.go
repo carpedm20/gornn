@@ -24,4 +24,9 @@ func main() {
 	PrintMatrix(graph1.Tanh(mat))
 	pluck := graph1.RowPluck(mat, 1)
 	PrintMatrix(pluck)
+
+	var a int = 0.0
+	var b int32 = a
+
+	print(b)
 }

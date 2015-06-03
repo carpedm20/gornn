@@ -187,18 +187,18 @@ func (g Graph) ElemMultiply(mat1, mat2 *Matrix) (out *Matrix) {
 }
 
 func SoftMax(mat *Matrix) (out *Matrix) {
-	n:= len(mat.W)
+	n := len(mat.W)
 	out = ZeroMatrix(mat.N, mat.D)
 
 	maxval := -999999.0
-	for i := 0; i<n; i++ {
+	for i := 0; i < n; i++ {
 		if mat.W[i] > maxval {
 			maxval = mat.W[i]
 		}
 	}
 
 	s := 0.0
-	for i:=0, i<n; i++ {
+	for i := 0; i < n; i++ {
 		out.W[i] = math.Exp(mat.W[i] - maxval)
 		s += out.W[i]
 	}

@@ -6,6 +6,8 @@ type Solver struct {
 	stepCache map[int]float64
 }
 
-func (s *Solver) step(model Graph, stepSize int, regc, float64 float64) {
-
-}
+/*func (s *Solver) step(model *map[string]*Matrix, stepSize int, regc, float64 float64) {
+	solverStats := map[int]float64
+	numClipped, numTot := 0, 0
+	for
+}*/
